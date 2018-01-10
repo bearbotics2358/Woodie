@@ -12,7 +12,10 @@
 
 Woodie::Woodie(void):
 
-a_Joystick(JOYSTICK_PORT) // this should be the gamepad - list on port 1
+a_Joystick(JOYSTICK_PORT), // this should be the gamepad - list on port 1
+a_leftDrive(LEFT_DRIVE_TALON_ID),
+a_rightDrive(RIGHT_DRIVE_TALON_ID),
+a_Drivetrain(a_leftDrive, a_rightDrive)
 
 {
 	SmartDashboard::init();
@@ -52,7 +55,7 @@ void Woodie::TeleopInit()
 
 void Woodie::TeleopPeriodic()
 {
-
+	a_Drivetrain.ArcadeDrive(a_Joystick.GetRawAxis(0), a_Joystick.GetRawAxis(1));
 }
 
 void Woodie::TestInit()

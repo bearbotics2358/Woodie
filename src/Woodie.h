@@ -3,9 +3,11 @@
 
 #include <WPILib.h>
 #include <SerialPort.h>
+#include <Prefs.h>
 #include <IterativeRobot.h>
 #include "SmartDashboard/SmartDashboard.h"
 #include "SmartDashboard/SendableChooser.h"
+#include "ctre/Phoenix.h"
 
 class Woodie : public IterativeRobot {
 public:
@@ -25,6 +27,9 @@ public:
 
 private:
 	Joystick a_Joystick;
+	WPI_TalonSRX a_leftDrive;
+	WPI_TalonSRX a_rightDrive;
+	DifferentialDrive a_Drivetrain;
 };
 
 #endif
