@@ -55,7 +55,7 @@ void Woodie::TeleopInit()
 
 void Woodie::TeleopPeriodic()
 {
-	a_Drivetrain.ArcadeDrive(a_Joystick.GetRawAxis(0), a_Joystick.GetRawAxis(1));
+	a_Drivetrain.ArcadeDrive(a_Joystick.GetRawAxis(1), a_Joystick.GetRawAxis(0));
 }
 
 void Woodie::TestInit()

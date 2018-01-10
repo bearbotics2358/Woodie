@@ -3,7 +3,6 @@
 
 #include <WPILib.h>
 #include <SerialPort.h>
-#include <Prefs.h>
 #include <IterativeRobot.h>
 #include "SmartDashboard/SmartDashboard.h"
 #include "SmartDashboard/SendableChooser.h"
