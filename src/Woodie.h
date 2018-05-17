@@ -7,6 +7,8 @@
 #include "SmartDashboard/SmartDashboard.h"
 #include "SmartDashboard/SendableChooser.h"
 #include "ctre/Phoenix.h"
+#include <DiffDrive.h>
+#include <JrimmyGyro.h>
 
 class Woodie : public IterativeRobot {
 public:
@@ -23,12 +25,12 @@ public:
 	void AutonomousPeriodicFull(void);
 	void AutonomousPeriodic(void);
 	void AutonomousPeriodicSimple(void);
+	void ShuffleboardPeriodicUpdate(void);
 
 private:
 	Joystick a_Joystick;
-	WPI_TalonSRX a_leftDrive;
-	WPI_TalonSRX a_rightDrive;
-	DifferentialDrive a_Drivetrain;
+	JrimmyGyro a_Gyro;
+	DiffDrive a_DiffDrive;
 };
 
 #endif
